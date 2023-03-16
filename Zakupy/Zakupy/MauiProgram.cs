@@ -1,4 +1,4 @@
-﻿using Zakupy.Data;
+﻿using Zakupy.Database;
 
 namespace Zakupy;
 
@@ -15,11 +15,17 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		string dbPath = Path.Combine(FileSystem.AppDataDirectory, "Zakupy.db");
 
-		builder.Services.AddSingleton(s => 
-			ActivatorUtilities.CreateInstance<StorageRepository>(s, dbPath));
+        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddTransient<MainPage>();
 
-		return builder.Build();
+        builder.Services.AddSingleton<WydatkiDb>();
+
+        /*string dbPath = Path.Combine(FileSystem.AppDataDirectory, "Zakupy.db");*/
+
+        /*builder.Services.AddSingleton(s => 
+			ActivatorUtilities.CreateInstance<StorageRepository>(s, dbPath));*/
+
+        return builder.Build();
 	}
 }
