@@ -3,57 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Zakupy.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="10"
-            Padding="20"
-            >
-
-            <Entry
-                Placeholder="Data zakupu"
-                FontSize="20"
-                HorizontalOptions="Center" />
-            
-           
-            <Entry
-                Placeholder="Nazwa towaru"
-                FontSize="20"
-                HorizontalOptions="Center" />
-
-            <Entry
-                Placeholder="Cena"
-                FontSize="20"
-                HorizontalOptions="Center" />
-            
-            <Button
-                x:Name="Save"
-                Text="Zapisz"
-                FontSize="23"
-                
-                SemanticProperties.Hint="Zapisuje wprowadzone dane"
-                HorizontalOptions="End" />
-            
-            <Button
-                x:Name="AllData"
-                Text="Wszystkie dane"
-                SemanticProperties.Hint="Pokazuje wszytkie dane" />
-            
-            <Button
-                x:Name="FromDayData"
-                Text="Z danego dnia"
-                SemanticProperties.Hint="Pokazuje dane z danego dnia" />
-                
-            <Button
-                x:Name="FromToData"
-                Text="Z danego okresu"
-                SemanticProperties.Hint="Pokazuje dane z danego okresu" />
-
-             <Button
-                x:Name="Chart"
-                Text="Wykres"
-                SemanticProperties.Hint="Generuje stornę z wykresami" />
-
-        </VerticalStackLayout>
-    </ScrollView>
+    
+    
 
 </ContentPage>

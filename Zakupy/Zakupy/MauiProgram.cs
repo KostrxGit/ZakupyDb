@@ -19,7 +19,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddTransient<MainPage>();
 
-        builder.Services.AddSingleton<WydatkiDb>();
+        builder.Services.AddSingleton<ExpensesDb>();
 
         /*string dbPath = Path.Combine(FileSystem.AppDataDirectory, "Zakupy.db");*/
 

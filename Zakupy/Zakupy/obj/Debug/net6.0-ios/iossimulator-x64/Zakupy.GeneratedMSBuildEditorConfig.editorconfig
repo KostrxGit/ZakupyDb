@@ -39,3 +39,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Zakupy.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/Important Things/Learing programing/GogolaHuj/ZakupyDb/Zakupy/Zakupy/Views/ExpensesItemPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Zakupy.Views.ExpensesItemPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ExpensesItemPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ExpensesItemPage.xaml
+
+[D:/Important Things/Learing programing/GogolaHuj/ZakupyDb/Zakupy/Zakupy/Views/ExpensesListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Zakupy.Views.ExpensesListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ExpensesListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ExpensesListPage.xaml
