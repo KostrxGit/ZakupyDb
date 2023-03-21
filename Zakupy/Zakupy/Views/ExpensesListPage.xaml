@@ -5,11 +5,12 @@
              Title="Expenses">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Clicked="OnItemAdded" Text="+"
-                     IconImageSource="plus.png">
-            <!--<OnPlatform x:TypeArguments="ImageSource">
-                <On Platform="Android, UWP" Value="plus.png" />
-            </OnPlatform>-->
+        <ToolbarItem Clicked="OnItemAdded" Text="+">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <On Platform="Android, UWP" Value="plus.png" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 

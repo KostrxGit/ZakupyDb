@@ -1,4 +1,4 @@
-﻿
+﻿using Zakupy.Views;
 
 namespace Zakupy;
 
@@ -8,7 +8,10 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new AppShell();
+        MainPage = new NavigationPage(new ExpensesItemPage())
+        {
+            BarTextColor = Color.FromRgb(255,255,255)
+        };
  
     }
 }

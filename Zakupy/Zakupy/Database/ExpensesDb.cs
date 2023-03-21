@@ -28,6 +28,15 @@ namespace Zakupy.Database
             return instance;
         });
 
+        async Task Init()
+        {
+            if (Database is not null)
+                return;
+
+            Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
+            var result = await Database.CreateTableAsync<Expenses>();
+        }
+
         public ExpensesDb() 
         {
             Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
@@ -43,16 +52,24 @@ namespace Zakupy.Database
             return Database.Table<Expenses>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveExpensesAsync(Expenses item) 
+        public async Task<int> SaveExpensesAsync(Expenses item) 
         {
+
+            await Init();
             if (item.Id != 0)
+                return await Database.UpdateAsync(item);
+            else
+                return await Database.InsertAsync(item);
+
+
+            /*if (item.Id != 0)
             {
                 return Database.UpdateAsync(item);
             }
             else 
             {
                 return Database.InsertAsync(item);
-            }
+            }*/
         }
 
     }
