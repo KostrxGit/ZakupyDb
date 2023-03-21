@@ -1,5 +1,5 @@
 ﻿using Zakupy.Database;
-
+using Zakupy.Views;
 namespace Zakupy;
 
 public static class MauiProgram
@@ -16,8 +16,8 @@ public static class MauiProgram
 			});
 
 
-        builder.Services.AddSingleton<MainPage>();
-        builder.Services.AddTransient<MainPage>();
+        builder.Services.AddSingleton<ExpensesListPage>();
+        builder.Services.AddTransient<ExpensesItemPage>();
 
         builder.Services.AddSingleton<ExpensesDb>();
 

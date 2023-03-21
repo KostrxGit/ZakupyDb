@@ -47,9 +47,10 @@ namespace Zakupy.Database
             return Database.Table<Expenses>().ToListAsync();
         }
 
-        public Task<Expenses> GetExpensesAsync(int id) 
+        public async Task<Expenses> GetExpensesAsync(int id) 
         {
-            return Database.Table<Expenses>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            await Init();
+            return await Database.Table<Expenses>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
         public async Task<int> SaveExpensesAsync(Expenses item) 
