@@ -16,14 +16,14 @@ public static class MauiProgram
 			});
 
 
-        builder.Services.AddSingleton<ExpensesListPage>();
+        /*builder.Services.AddSingleton<ExpensesListPage>();
         builder.Services.AddTransient<ExpensesItemPage>();
 
-        builder.Services.AddSingleton<ExpensesDb>();
+        builder.Services.AddSingleton<ExpensesDatabase>();
 
-        /*string dbPath = Path.Combine(FileSystem.AppDataDirectory, "Zakupy.db");*/
+        string dbPath = Path.Combine(FileSystem.AppDataDirectory, "Zakupy.db");
 
-        /*builder.Services.AddSingleton(s => 
+        builder.Services.AddSingleton(s => 
 			ActivatorUtilities.CreateInstance<StorageRepository>(s, dbPath));*/
 
         return builder.Build();

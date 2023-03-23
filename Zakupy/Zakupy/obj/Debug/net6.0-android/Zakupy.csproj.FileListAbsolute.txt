@@ -1925,3 +1925,9 @@ D:\Important Things\Learing programing\GogolaHuj\ZakupyDb\Zakupy\Zakupy\obj\Debu
 D:\Important Things\Learing programing\GogolaHuj\ZakupyDb\Zakupy\Zakupy\obj\Debug\net6.0-android\stamp\_GeneratePackageManagerJava.stamp
 D:\Important Things\Learing programing\GogolaHuj\ZakupyDb\Zakupy\Zakupy\obj\Debug\net6.0-android\stamp\_ResolveLibraryProjectImports.stamp
 D:\Important Things\Learing programing\GogolaHuj\ZakupyDb\Zakupy\Zakupy\obj\Debug\net6.0-android\resizetizer\r\drawable\plus.png
+D:\Important Things\Learing programing\GogolaHuj\ZakupyDb\Zakupy\Zakupy\obj\Debug\net6.0-android\android\assets\Newtonsoft.Json.dll
+D:\Important Things\Learing programing\GogolaHuj\ZakupyDb\Zakupy\Zakupy\obj\Debug\net6.0-android\android\assets\SQLiteNetExtensions.dll
+D:\Important Things\Learing programing\GogolaHuj\ZakupyDb\Zakupy\Zakupy\obj\Debug\net6.0-android\android\assets\SQLiteNetExtensionsAsync.dll
+D:\Important Things\Learing programing\GogolaHuj\ZakupyDb\Zakupy\Zakupy\obj\Debug\net6.0-android\android\assets\SQLiteNetExtensionsAsync.pdb
+D:\Important Things\Learing programing\GogolaHuj\ZakupyDb\Zakupy\Zakupy\obj\Debug\net6.0-android\android\assets\SQLitePCLRaw.provider.dynamic_cdecl.dll
+D:\Important Things\Learing programing\GogolaHuj\ZakupyDb\Zakupy\Zakupy\obj\Debug\net6.0-android\android\assets\SQLitePCLRaw.provider.sqlite3.dll

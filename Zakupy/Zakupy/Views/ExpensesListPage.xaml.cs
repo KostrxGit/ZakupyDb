@@ -16,30 +16,31 @@ namespace Zakupy.Views
             InitializeComponent();
         }
 
-        protected override async void OnAppearing() 
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
-            ExpensesDb db = await ExpensesDb.Instance;
-            listView.ItemsSource = await db.GetItemsAsync();
+            ExpensesDatabase database = await ExpensesDatabase.Instance;
+            listView.ItemsSource = await database.GetItemsAsync();
         }
 
-        async void OnItemAdded(object sender, EventArgs e) 
+        async void OnItemAdded(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ExpensesItemPage
+            await Navigation.PushAsync(new ExpensesListPage
             {
                 BindingContext = new Expenses()
             });
         }
 
-        async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e) 
+        async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
             {
-                await Navigation.PushAsync(new ExpensesItemPage
+                await Navigation.PushAsync(new ExpensesListPage
                 {
                     BindingContext = e.SelectedItem as Expenses
                 });
-            }    
+            }
         }
+
     }
 }

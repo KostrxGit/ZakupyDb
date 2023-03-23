@@ -8,7 +8,7 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new NavigationPage(new ExpensesItemPage())
+        MainPage = new NavigationPage(new ExpensesListPage())
         {
             BarTextColor = Color.FromRgb(255,255,255)
         };

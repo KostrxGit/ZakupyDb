@@ -16,17 +16,17 @@ namespace Zakupy
             instance = new Lazy<Task<T>>(() => Task.Run(factory));
         }
 
-        public AsyncLazy(Func<Task<T>> factory) 
+        public AsyncLazy(Func<Task<T>> factory)
         {
             instance = new Lazy<Task<T>>(() => Task.Run(factory));
         }
 
-        public TaskAwaiter<T> GetAwaiter() 
+        public TaskAwaiter<T> GetAwaiter()
         {
             return instance.Value.GetAwaiter();
         }
 
-        public void Start() 
+        public void Start()
         {
             var unused = instance.Value;
         }

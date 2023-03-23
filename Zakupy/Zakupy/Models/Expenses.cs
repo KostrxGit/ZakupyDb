@@ -10,8 +10,8 @@ namespace Zakupy.Models
     public class Expenses
     {
         [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int ID { get; set; }
+        public static string Name { get; set; }
         public string Date { get; set; }
         public double Price { get; set; }
     

@@ -8,14 +8,14 @@ using Zakupy.Models;
 
 namespace Zakupy.Database
 {
-    public class ExpensesDb
+    public class ExpensesDatabase
     {
         static SQLiteAsyncConnection Database;
 
-        public static readonly AsyncLazy<ExpensesDb> Instance = 
-            new AsyncLazy<ExpensesDb>(async () =>
+        public static readonly AsyncLazy<ExpensesDatabase> Instance = 
+            new AsyncLazy<ExpensesDatabase>(async () =>
             {
-            var instance = new ExpensesDb();
+            var instance = new ExpensesDatabase();
                 try
                 {
                     CreateTableResult result = await Database.CreateTableAsync<Expenses>();
@@ -28,16 +28,7 @@ namespace Zakupy.Database
             return instance;
         });
 
-        async Task Init()
-        {
-            if (Database is not null)
-                return;
-
-            Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
-            var result = await Database.CreateTableAsync<Expenses>();
-        }
-
-        public ExpensesDb() 
+        public ExpensesDatabase() 
         {
             Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
         }
@@ -46,31 +37,26 @@ namespace Zakupy.Database
         {
             return Database.Table<Expenses>().ToListAsync();
         }
-
-        public async Task<Expenses> GetExpensesAsync(int id) 
+        public Task<List<Expenses>> GetItemsNotDoneAsync()
         {
-            await Init();
-            return await Database.Table<Expenses>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            return Database.QueryAsync<Expenses>("SELECT * FROM [Expenses]");
         }
 
-        public async Task<int> SaveExpensesAsync(Expenses item) 
+        public Task<Expenses> GetItemAsync(int id)
         {
+            return Database.Table<Expenses>().Where(i => i.ID == id).FirstOrDefaultAsync();
+        }
 
-            await Init();
-            if (item.Id != 0)
-                return await Database.UpdateAsync(item);
-            else
-                return await Database.InsertAsync(item);
-
-
-            /*if (item.Id != 0)
+        public Task<int> SaveExpensesAsync(Expenses item)
+        { 
+            if (item.ID != 0)
             {
                 return Database.UpdateAsync(item);
             }
             else 
             {
                 return Database.InsertAsync(item);
-            }*/
+            }
         }
 
     }

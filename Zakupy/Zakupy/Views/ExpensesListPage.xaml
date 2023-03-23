@@ -8,11 +8,13 @@
         <ToolbarItem Clicked="OnItemAdded" Text="+">
             <ToolbarItem.IconImageSource>
                 <OnPlatform x:TypeArguments="ImageSource">
-                    <On Platform="Android, UWP" Value="plus.png" />
+                    <On Platform="Android,UWP" Value="plus.png" />
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
+
+    
 
     <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
         <ListView.ItemTemplate>
